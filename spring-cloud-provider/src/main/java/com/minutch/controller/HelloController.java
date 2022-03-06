@@ -13,8 +13,9 @@ public class HelloController {
     HttpServletRequest request;
 
     @RequestMapping("/service/hello")
-    public String hello() {
+    public String hello() throws InterruptedException {
 
+        Thread.sleep(4000L);
         System.out.println(""+request.getRemoteHost()+":"+request.getServerPort());
         return "hello,spring cloud!";
     }
