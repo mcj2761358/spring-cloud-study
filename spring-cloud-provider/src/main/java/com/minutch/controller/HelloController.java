@@ -21,7 +21,8 @@ public class HelloController {
     }
 
     @RequestMapping("/service/hello/feign")
-    public String helloFeign() {
+    public String helloFeign() throws InterruptedException {
+        Thread.sleep(10000);
         System.out.println(""+request.getRemoteHost()+":"+request.getServerPort());
         return "hello,spring cloud feign!";
     }
