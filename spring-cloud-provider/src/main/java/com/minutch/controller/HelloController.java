@@ -19,4 +19,10 @@ public class HelloController {
         System.out.println(""+request.getRemoteHost()+":"+request.getServerPort());
         return "hello,spring cloud!";
     }
+
+    @RequestMapping("/service/hello/feign")
+    public String helloFeign() {
+        System.out.println(""+request.getRemoteHost()+":"+request.getServerPort());
+        return "hello,spring cloud feign!";
+    }
 }
