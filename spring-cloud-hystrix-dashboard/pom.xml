@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.minutch</groupId>
-    <artifactId>spring-clound-consumer</artifactId>
+    <artifactId>spring-cloud-hystrix-dashboard</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-clound-consumer</name>
-    <description>spring-clound-consumer</description>
+    <name>spring-cloud-hystrix-dashboard</name>
+    <description>spring-cloud-hystrix-dashboard</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -28,32 +28,12 @@
             <scope>test</scope>
         </dependency>
 
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
-            <version>1.4.4.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+            <version>1.4.5.RELEASE</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
     <dependencyManagement>
         <dependencies>
@@ -67,6 +47,7 @@
         </dependencies>
     </dependencyManagement>
 
+
     <repositories>
         <repository>
             <id>spring-milestones</id>
@@ -77,5 +58,14 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
